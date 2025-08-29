@@ -40,11 +40,12 @@
 ### Setup
 ```bash
 # Clone repository
-git clone ()
+git clone https://github.com/nicolaegues/trap_dnn.git
 cd trap_dnn
 
 # Create & activate virtual environment
-conda create ()
+conda create --name trap_dnn
+conda activate trap_dnn
 
 # Install dependencies
 pip install -r requirements.txt
@@ -56,6 +57,7 @@ pip install -r requirements.txt
 
 ### 1. Generate Training Data
 Before running, edit `configs/datagen.yaml` to set output path, number of samples and number of traps. Set trap_coords to None so that random traps will be generated for each sample.
+
 Then run:
 ```bash
 python generate_binary_traps.py
@@ -64,6 +66,7 @@ This will populate a `data/` folder with NumPy arrays containing the binary targ
 
 ### 2. Train the Autoencoder
 Edit `configs/train.yaml` to set output path, model hyperparameters, and other flags. 
+
 Then run:
 ```bash
 python train.py
@@ -77,6 +80,7 @@ python train.py
 
 ### 3. Test a Trained Model
 Edit `configs/test.yaml` to specify the path to the test data, to the saved model's state dictionary, and the output path, as well as some testing parameters.
+
 Then run:
 ```bash
 python test.py 
@@ -89,6 +93,7 @@ python test.py
 
 ### 4. Compare with IASA Baseline
 Edit `configs/iasa.yaml` to adjust the IASA settings and test dataset path.  
+
 Then run:
 ```bash
 python iasa.py
@@ -96,6 +101,7 @@ python iasa.py
 
 ### 5. Optional: Add the Signature for a Vortex Trap to the Phases 
 Edit `configs/signatures.yaml` to specify the path to the phases the signature wants to be applied to. 
+
 Then run:
 ```bash
 python add_signature.py

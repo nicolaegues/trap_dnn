@@ -1,0 +1,5 @@
+paths: 
+  #folder from which (1) the phases will be retrieved and (2) where the twin traps will also be stored
+  trap_dir: "experiments/z_ext_1e4_exp_Fri-15-Aug-2025-at-08-56-41PM/test_figs/"
+
+

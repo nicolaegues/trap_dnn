@@ -1,0 +1,12 @@
+paths:
+  data_dir: "data/perfect_binary_traps_ext_1e4/test/" # test data#"data/single_traps/" 
+  experiment_dir: "experiments/exp_Thu-28-Aug-2025-at-07-26-56PM/" # Experiment folder where the model's state dictionary is located 
+  output_subdir: "test_figs/"
+
+
+run:
+  max_figs_to_test: 20
+  plot_gorkov: false
+  reduce_elements: false # IMPORTANT - NEEDS TO BE THE SAME AS FOR TRAINING
+  no_elements_per_side: 7 # used only if reduce_elements=true
+

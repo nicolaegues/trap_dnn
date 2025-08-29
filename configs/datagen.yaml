@@ -1,0 +1,15 @@
+
+paths: 
+  output_dir :  "data/traps_ext_1e4/train/"
+
+run: 
+  no_samples:  1e4 # max samples to test
+  no_traps: 2
+
+  # Only used if load_coords is False:
+  trap_coords: [[(4, 32), (60, 8)], [(32, 32), (48, 8)]]    
+  # corresponds to two samples, each with the coordinates of two traps. Can also be None if random coordinates want to be generated. 
+  #E.g. [None, [(32, 32), (48, 8)]] or just None.
+
+  #y axis 0-->+64: top to bottom. 
+  #x axis 0-->+64: left to right

@@ -1,0 +1,19 @@
+
+paths: 
+  coords_dir : "data/perfect_binary_traps_ext_1e4/test/trap_coords.npy" # only accessed if load_coords is true
+  output_dir : "iasa_results/64x64/"
+
+run: 
+  load_coords: true #whether to load the trap coordinates from coords_dir
+  no_samples: 1 # max samples to test
+  reduce_elements: false
+  iterations: 200
+  N_elements_per_side: 7 # only used if reduce_elements is True
+
+  # Only used if load_coords is False:
+  trap_coords: [[(4, 32), (60, 8)], [(32, 32), (48, 8)]]    
+  # corresponds to two samples, each with the coordinates of two traps. Can also be None if random coordinates want to be generated. 
+  #E.g. [None, [(32, 32), (48, 8)]] or just None.
+
+  #y axis 0-->+64: top to bottom. 
+  #x axis 0-->+64: left to right 

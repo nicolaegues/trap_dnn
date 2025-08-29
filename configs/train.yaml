@@ -1,0 +1,15 @@
+
+paths: 
+  data_dir : "data/triple_traps_ext_1e4/train/" # Training data
+
+run: 
+  plot_progression : false
+  reduce_elements : false
+  no_elements_per_side: 7 # used only if reduce_elements=true
+
+hyperparameters: 
+  epochs : 3
+  batch_size : 8
+  learning_rate : 0.001
+  trap_loss_weight : 1.4
+  raw_trap_loss_weight : 0

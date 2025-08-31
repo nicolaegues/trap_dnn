@@ -62,7 +62,7 @@ Then run:
 ```bash
 python generate_binary_traps.py
 ```
-This will populate a `data/` folder with NumPy arrays containing the binary target patterns and trap coordinates.
+This will create and fill the specified `data/` folder with NumPy arrays containing the binary target patterns and trap coordinates.
 
 ### 2. Train the Autoencoder
 Edit `configs/train.yaml` to set output path, model hyperparameters, and other flags. 
@@ -87,7 +87,7 @@ python test.py
 ```
 - Stores test results in a subdirectory of the original training folder (with the model)
   `metrics.json`: Contains the main metrics (Reconstruction MAE, PSBR, Trap Amplitude variance) for each sample, as well as other trap-specific outputs. The means and standard deviation for each metric over the entire test set is also given. 
-- Stores plots of the target, predicted phases, and acoustic field magnitude for each sample. NumPy arrays containing those images is also stored for each sample. 
+- Stores plots of the target, predicted phases, and acoustic field magnitude for each sample. NumPy arrays containing those images are also stored for each sample. 
 - Stores a used_config.yaml file for reproducibility.
 
 
